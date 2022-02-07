@@ -1,0 +1,44 @@
+.common {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 90%;
+  max-width: 40rem;
+}
+
+.tagArea {
+  display: flex;
+}
+
+.display {
+  display: flex;
+}
+
+.input {
+  margin-left: 1.5rem;
+  border: none;
+  outline: none;
+}
+
+.tag {
+  display: flex;
+  background-color: grey;
+  padding: 5px;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.tagText {
+  color: white;
+  font-family: sans-serif;
+  font-size: 0.9rem;
+}
+
+.tagClose {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  font-family: sans-serif;
+  color: white;
+}
+.tagClose:hover {
+  cursor: pointer;
+}

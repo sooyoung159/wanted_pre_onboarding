@@ -1,0 +1,38 @@
+.common {
+  margin: 2rem auto;
+  padding: 1rem;
+  width: 90%;
+  max-width: 40rem;
+}
+
+.container {
+  width: 50px;
+  height: 50px;
+  background: black;
+  height: 26px;
+  width: 50px;
+  border-radius: 50px;
+}
+
+.checkbox {
+  display: none;
+}
+.checkbox:checked + .label .ball {
+  transform: translateX(24px);
+}
+
+.label {
+  position: relative;
+}
+
+.ball {
+  position: absolute;
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+
+  transition: transform 0.2s linear;
+  background-color: red;
+}
