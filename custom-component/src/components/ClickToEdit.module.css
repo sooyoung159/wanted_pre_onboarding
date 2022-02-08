@@ -1,26 +1,49 @@
 .common {
   margin: 2rem auto;
-  padding: 1rem;
+  /* padding: 1rem; */
   width: 90%;
   max-width: 40rem;
 }
 
-.common label {
-  display: block;
+.header {
+  background: #4f005f;
+  padding: 10px;
+  color: white;
+}
+
+.h2 {
+  margin: 0;
+}
+
+.content {
+  height: 150px;
+  align-items: center;
+  text-align: center;
+}
+
+.nameInput {
+  padding-top: 20px;
+}
+
+.ageInput {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.label {
   font-weight: bold;
   margin-bottom: 0.5rem;
+  padding-right: 20px;
 }
 
-.common input {
+.input {
   font: inherit;
-  display: block;
-  width: 100%;
+
+  width: 250px;
   border: 1px solid #ccc;
-  padding: 0.15rem;
-  margin-bottom: 0.5rem;
 }
 
-.common input:focus {
+.input:focus {
   outline: none;
   border-color: #4f005f;
 }

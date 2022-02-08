@@ -29,25 +29,38 @@ const ClickToEdit = (props) => {
 
   return (
     <Card className={classes.common}>
-      <h1>ClickToEdit</h1>
-      <form onSubmit={changeHandler}>
-        <label htmlFor="name">이름</label>
-        <input
-          id="name"
-          type="text"
-          onBlur={nameChangeHandler}
-          // value={setName}
-        />
-        <label htmlFor="age">나이</label>
-        <input
-          id="age"
-          type="number"
-          onBlur={ageChangeHandler}
-          // value={setAge}
-        />
-      </form>
-      <div>
-        이름 {name} 나이 {age}
+      <header className={classes.header}>
+        <h2 className={classes.h2}>ClickToEdit</h2>
+      </header>
+      <div className={classes.content}>
+        <form onSubmit={changeHandler}>
+          <div className={classes.nameInput}>
+            <label htmlFor="name" className={classes.label}>
+              이름
+            </label>
+            <input
+              id="name"
+              type="text"
+              onBlur={nameChangeHandler}
+              className={classes.input}
+            />
+          </div>
+          <div className={classes.ageInput}>
+            <label htmlFor="age" className={classes.label}>
+              나이
+            </label>
+
+            <input
+              id="age"
+              type="number"
+              onBlur={ageChangeHandler}
+              className={classes.input}
+            />
+          </div>
+        </form>
+        <div className={classes.result}>
+          이름 {name} 나이 {age}
+        </div>
       </div>
     </Card>
   );

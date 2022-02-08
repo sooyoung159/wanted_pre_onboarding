@@ -12,14 +12,7 @@ const Tab = () => {
 
   const dummyTable = [
     {
-      title: (
-        <button
-          className={activeIndex === 0 ? classes.isActive : ""}
-          onClick={() => tabHandler(0)}
-        >
-          Tab1
-        </button>
-      ),
+      title: <Button onClick={() => tabHandler(0)}>Tab1</Button>,
       content: "Tab menu ONE",
     },
     {
@@ -34,9 +27,13 @@ const Tab = () => {
 
   return (
     <Card className={classes.common}>
-      <h1>Tab</h1>
-      {dummyTable.map((data) => data.title)}
-      <div>{dummyTable[activeIndex].content}</div>
+      <header className={classes.header}>
+        <h2 className={classes.h2}>Tab</h2>
+      </header>
+      <div className={classes.content}>
+        {dummyTable.map((data) => data.title)}
+        <div className={classes.result}>{dummyTable[activeIndex].content}</div>
+      </div>
     </Card>
   );
 };

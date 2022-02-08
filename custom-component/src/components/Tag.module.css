@@ -1,8 +1,26 @@
 .common {
   margin: 2rem auto;
-  padding: 1rem;
+  /* padding: 1rem; */
   width: 90%;
   max-width: 40rem;
+}
+
+.header {
+  background: #4f005f;
+  padding: 10px;
+  color: white;
+}
+
+.h2 {
+  margin: 0;
+}
+
+.content {
+  height: 80px;
+  align-items: center;
+  text-align: center;
+  margin-top: 3rem;
+  margin-left: 2px;
 }
 
 .tagArea {
@@ -21,10 +39,11 @@
 
 .tag {
   display: flex;
-  background-color: grey;
+  background-color: #4f005f;
   padding: 5px;
   border-radius: 5px;
   align-items: center;
+  margin-right: 3px;
 }
 
 .tagText {

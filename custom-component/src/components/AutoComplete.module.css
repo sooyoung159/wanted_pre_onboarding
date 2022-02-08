@@ -1,6 +1,45 @@
 .common {
   margin: 2rem auto;
-  padding: 1rem;
+  /* padding: 1rem; */
   width: 90%;
   max-width: 40rem;
+}
+
+.header {
+  background: #4f005f;
+  padding: 10px;
+  color: white;
+}
+
+.h2 {
+  margin: 0;
+}
+
+.content {
+  height: 80px;
+  /* align-items: center; */
+  text-align: center;
+  padding-top: 3.5rem;
+  align-items: center;
+}
+
+.input {
+  font: inherit;
+
+  width: 250px;
+  border: 1px solid #ccc;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #4f005f;
+}
+
+.searchBox {
+  width: 250px;
+  text-align: left;
+  background: white;
+  border-radius: 10px;
+  margin-left: 190px;
+  padding-left: 2px;
 }

@@ -11,7 +11,7 @@ const ModalUI = (props) => {
           <h2>{props.title}</h2>
         </header>
         <div className={classes.content}>
-          <p>메세지</p>
+          <p>Please click to close!</p>
         </div>
         <footer className={classes.actions}>
           <Button onClick={props.onConfirm}>Close</Button>

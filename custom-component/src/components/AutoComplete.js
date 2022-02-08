@@ -13,25 +13,35 @@ const AutoComplete = () => {
     setDisplay(false);
   };
 
+  const searchHandler = (event) => {
+    setDisplay(true);
+    setSearch(event.target.value);
+  };
+
   return (
     <Card className={classes.common}>
-      <h1>AutoComplete</h1>
-      <input
-        onChange={(event) => setSearch(event.target.value)}
-        onClick={() => setDisplay(!display)}
-        value={search}
-      />
-      {display && (
-        <div>
-          {DUMMYDATA.filter(
-            (data) => data.indexOf(search.toLowerCase()) > -1
-          ).map((data, i) => (
-            <div onClick={() => completeName(data)} key={i}>
-              {data}
-            </div>
-          ))}
-        </div>
-      )}
+      <header className={classes.header}>
+        <h2 className={classes.h2}>AutoComplete</h2>
+      </header>
+      <div className={classes.content}>
+        <input
+          onChange={searchHandler}
+          // onClick={() => setDisplay(!display)}
+          value={search}
+          className={classes.input}
+        />
+        {display && (
+          <div className={classes.searchBox}>
+            {DUMMYDATA.filter(
+              (data) => data.indexOf(search.toLowerCase()) > -1
+            ).map((data, i) => (
+              <div onClick={() => completeName(data)} key={i}>
+                {data}
+              </div>
+            ))}
+          </div>
+        )}
+      </div>
     </Card>
   );
 };

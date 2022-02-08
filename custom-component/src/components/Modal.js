@@ -1,10 +1,10 @@
 import Card from "./UI/Card";
-import classes from "./Toggle.module.css";
+import classes from "./Modal.module.css";
 import Button from "./UI/Button";
 import ModalUI from "./UI/ModalUI";
 import { useState } from "react";
 
-const Modal = (props) => {
+const Modal = () => {
   const [modal, setModal] = useState(false);
 
   const modalHandler = () => {
@@ -16,8 +16,12 @@ const Modal = (props) => {
   };
   return (
     <Card className={classes.common}>
-      <h1>Modal</h1>
-      <Button onClick={modalHandler}>Click me!</Button>
+      <header className={classes.header}>
+        <h2 className={classes.h2}>Modal</h2>
+      </header>
+      <div className={classes.content}>
+        <Button onClick={modalHandler}>Click me!</Button>
+      </div>
       {modal && <ModalUI onConfirm={onConfirm} />}
     </Card>
   );
