@@ -4,20 +4,9 @@ import Card from "./UI/Card";
 
 import classes from "./ClickToEdit.module.css";
 
-const ClickToEdit = (props) => {
+const ClickToEdit = () => {
   const [name, setName] = useState("최해커");
   const [age, setAge] = useState("30");
-
-  let uName = "";
-  let uAge = 0;
-
-  const changeHandler = (event) => {
-    event.preventDefault();
-    uName = name;
-    uAge = age;
-    setName("");
-    setAge("");
-  };
 
   const nameChangeHandler = (event) => {
     setName(event.target.value);
@@ -33,7 +22,7 @@ const ClickToEdit = (props) => {
         <h2 className={classes.h2}>ClickToEdit</h2>
       </header>
       <div className={classes.content}>
-        <form onSubmit={changeHandler}>
+        <form>
           <div className={classes.nameInput}>
             <label htmlFor="name" className={classes.label}>
               이름

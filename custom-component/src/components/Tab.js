@@ -10,18 +10,21 @@ const Tab = () => {
     setActiveIndex(index);
   };
 
-  const dummyTable = [
+  const DUMMYTABLE = [
     {
-      title: <Button onClick={() => tabHandler(0)}>Tab1</Button>,
+      title: "Tab1",
       content: "Tab menu ONE",
+      key: "tab1",
     },
     {
-      title: <Button onClick={() => tabHandler(1)}>Tab2</Button>,
+      title: "Tab2",
       content: "Tab menu TWO",
+      key: "tab2",
     },
     {
-      title: <Button onClick={() => tabHandler(2)}>Tab3</Button>,
+      title: "Tab3",
       content: "Tab menu THREE",
+      key: "tab3",
     },
   ];
 
@@ -31,8 +34,12 @@ const Tab = () => {
         <h2 className={classes.h2}>Tab</h2>
       </header>
       <div className={classes.content}>
-        {dummyTable.map((data) => data.title)}
-        <div className={classes.result}>{dummyTable[activeIndex].content}</div>
+        {DUMMYTABLE.map((data, i) => (
+          <Button onClick={() => tabHandler(i)} key={data.key}>
+            {data.title}
+          </Button>
+        ))}
+        <div className={classes.result}>{DUMMYTABLE[activeIndex].content}</div>
       </div>
     </Card>
   );

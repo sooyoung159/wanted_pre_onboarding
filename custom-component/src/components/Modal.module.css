@@ -1,6 +1,5 @@
 .common {
   margin: 2rem auto;
-  /* padding: 1rem; */
   width: 90%;
   max-width: 40rem;
 }
@@ -17,7 +16,6 @@
 
 .content {
   height: 100px;
-  /* align-items: center; */
   text-align: center;
   padding-top: 3.5rem;
 }

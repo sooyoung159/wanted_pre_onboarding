@@ -1,11 +1,9 @@
 import Card from "./UI/Card";
 import classes from "./Tag.module.css";
-import { useRef, useState } from "react";
-// import Tag from "./UI/Tag";
+import { useState } from "react";
 
 const Tag = () => {
   const [tags, setTags] = useState(["react", "javaScript"]);
-  const inputRef = useRef();
   const [inputValue, setInputValue] = useState("");
 
   const inputValueChangeHandler = (event) => {
@@ -26,13 +24,13 @@ const Tag = () => {
   return (
     <Card className={classes.common}>
       <header className={classes.header}>
-        <h2 className={classes.h2}>Modal</h2>
+        <h2 className={classes.h2}>Tag</h2>
       </header>
       <div className={classes.content}>
         <div className={classes.tagArea}>
           <div className={classes.display}>
-            {tags.map((tag) => (
-              <div className={classes.tag}>
+            {tags.map((tag, i) => (
+              <div className={classes.tag} key={i}>
                 <div className={classes.tagText}>{tag}</div>
                 <div
                   className={classes.tagClose}
