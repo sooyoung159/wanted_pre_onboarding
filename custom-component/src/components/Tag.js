@@ -1,19 +1,15 @@
 import Card from "./UI/Card";
 import classes from "./Tag.module.css";
-import { useState } from "react";
+import { useRef, useState } from "react";
 
 const Tag = () => {
+  const tagInputRef = useRef();
   const [tags, setTags] = useState(["react", "javaScript"]);
-  const [inputValue, setInputValue] = useState("");
-
-  const inputValueChangeHandler = (event) => {
-    setInputValue(event.target.value);
-  };
 
   const addTags = (event) => {
-    if (event.key === "Enter" && inputValue) {
-      setTags([...tags, inputValue]);
-      setInputValue("");
+    if (event.key === "Enter" && tagInputRef.current.value) {
+      setTags([...tags, tagInputRef.current.value]);
+      tagInputRef.current.value = "";
     }
   };
 
@@ -46,9 +42,8 @@ const Tag = () => {
           <input
             className={classes.input}
             type="text"
-            value={inputValue}
             placeholder="Press enter to add"
-            onChange={inputValueChangeHandler}
+            ref={tagInputRef}
             onKeyDown={addTags}
           />
         </div>
